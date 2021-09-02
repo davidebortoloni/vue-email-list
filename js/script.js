@@ -11,9 +11,7 @@ const app = new Vue({
         .get("https://flynn.boolean.careers/exercises/api/random/mail")
         .then((res) => {
           const email = res.data.response;
-          if (!this.emails.includes(email)) {
-            this.emails.push(email);
-          }
+          this.emails.push(email);
         });
     },
   },
